@@ -99,7 +99,9 @@ const controlSearchResults = async () => {
     // 4) Render initial pagination buttons
     paginationView.render(model.state.search);
   } catch (err) {
-    console.log(err);
+    resultsView.renderError(
+      'İşlem çok uzun sürdü. İnternet bağlantısında sorun olabilir. Lütfen tekrar deneyiniz!'
+    );
   }
 };
 
